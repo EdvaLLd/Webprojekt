@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Technical page</title>
+    <link rel="stylesheet" href="Main.css">
+</head>
+<body>
+    <header>
+        <section class="top-bar">
+            
+            <picture >
+                <source srcset="https://picsum.photos/id/1/1000/200" media="(max-width:1000px)">
+                <img src="https://picsum.photos/id/2/1920/200" alt="bakgrundsbanner">
+            </picture>
+            <h1>Tekniska sidan</h1>
+        </section>
+    </header>
+    <main>
+        
+        <section class="main-section technical-page">
+            <div class="skills-header">
+                <div class="dropdown-menu">
+                    <button class="dropdown-btn">Alla</button>
+                    <div class="dropdown-content">
+                        <div onclick="filterSkills('all-tag', 'Alla')"><p>Alla</p></div>
+                        <div onclick="filterSkills('design-tag', 'Design')"><p>Design</p></div>
+                        <div onclick="filterSkills('programming-tag', 'Program- mering')"><p>Programmering</p></div>
+                        <div onclick="filterSkills('visual-tag', 'Visuell')"><p>Visuell</p></div>
+                    </div>
+                </div>
+                <section class="intro-text-technical">
+                    <h2>Mina tekniska kunskaper</h2>
+                    <p>Genom åren har jag testat på massor av olika programmeringsspråk och verktyg och liknande. 
+                        Nedan är en lista med de områden jag kan bäst.
+                    </p>
+                </section>
+            </div>
+            <section class="all-skills">
+                <article class="skills all-tag programming-tag">
+                    <img src="java-icon.png">
+                    <h3>Objektorienterad programmering</h3>
+                    <p>Jag har programmerat en hel del med objektorienterade språk, bland annat
+                        Java, C# och C++. Objektorienterat är den typen av programmering jag kan bäst och tycker är 
+                        roligast att jobba med.
+                    </p>
+                </article>
+
+                <article class="skills all-tag design-tag">
+                    <img src="video-game-designer-icon.png">
+                    <h3>Game design</h3>
+                    <p>Då jag tidigare gått en spelutvecklingsutbildning kan jag speldesign, alltså idéerna bakom
+                        spel och mer den övergripande designen, relativt väl. Flera av de spel vi gjorde på SU fick jag vara 
+                    med och vara en betydande del av just speldesignen.</p>
+                </article>
+
+                <article class="skills all-tag visual-tag design-tag programming-tag">
+                    <img src="web-development-icon.jpg">
+                    <h3>Webutveckling</h3>
+                    <p>Webutveckling är en kurs jag har gått några gånger på olika nivåer, och vid det här laget börjar jag få en relativt 
+                        klar bild över hur man vill lägga upp och designa hemsidor. Tyvärr är att få saker att se snygga ut inte min 
+                        starka sida, men den logiska delen är lättare.
+                    </p>
+                </article>
+
+                <article class="skills all-tag design-tag programming-tag">
+                    <img src="sql-icon.png">
+                    <h3>Databashantering</h3>
+                    <p>Databas är något jag har studerat både på SU och på STI, och jag har ganska bra koll på både den teoretiska delen 
+                        och faktisk implementation. Jag har hållt på med både SQL och relationsalgebra och nu även med implementation av 
+                        databas med Java.
+                    </p>
+                </article>
+
+                <article class="skills all-tag visual-tag">
+                    <img src="3d-modelling.jpg">
+                    <h3>3D-modellering</h3>
+                    <p>3D-modellering har jag haft några kurser i, men som sagt är jag inte jättebra på att få saker 
+                        att se snygga ut, men det rent logiska och tekniska delen av 3D-modellering är jag relativt bra 
+                        på. Jag har både gjorde objekt/karaktärer och större scener som miljöer/byggnader. Jag har 
+                        erfarenhet av Maya, Blender, Solidworks och Sculptris för själva modelleringsdelen, och sen 
+                        har jag byggt scener med objekten i exempelvis Unreal Engine.
+                    </p>
+                </article>
+            </section>
+        </section>
+        <div class="mobile-nav-arrow">
+            <img src="arrow-icon.png" alt="bild på pil">
+        </div>
+        <aside id="nav-menu">
+            <div class="nav-button">
+                <a href="Start.html" class="nav-link"><p>Start</p></a>
+            </div>
+            <div class="nav-button">
+                <a href="AboutMe.html" class="nav-link"><p>Om mig</p></a>
+            </div>
+            <div class="nav-button clicked">
+                <a href="Technical.html" class="nav-link"><p>Teknik</p></a>
+            </div>
+            <div class="nav-button">
+                <a href="CV.html" class="nav-link"><p>CV</p></a>
+            </div>
+            <div class="nav-button">
+                <a href="Contact.html" class="nav-link"><p>Kontakt</p></a>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>Hemsida om mig</p>
+    </footer>
+</body>
+<script src="Scripts.js"> </script>
+</html>

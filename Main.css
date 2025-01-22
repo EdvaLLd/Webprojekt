@@ -10,16 +10,22 @@ html, body{
 }
 
 body{
-    background-color: rgb(237, 214, 183);
+    background-color: rgb(135, 159, 138);
     
 }
 
+p{
+    text-align: center;
+}
+
 .show{
-    position: inherit !important;
+    left: 0 !important;
 }
 
 .flip-horizontally{
     transform: scaleX(-1);
+    position: absolute !important;
+    left: 220px;
 }
 
 #nav-menu{
@@ -27,17 +33,16 @@ body{
     height: calc(100vh - 230px);
     /*200px för top-bannern och 30px för footern*/
     flex-direction: column;
-    margin-left: 5vh;
+    margin-left: 3vh;
     display: flex;
-    background-color:rgb(104, 55, 16);
-
-
+    background-color:darkolivegreen;
+    min-width: 100px;
 }
 .nav-button{
     margin-bottom: -5px;
     height: 100px;
     background-color: rgba(100, 100, 100,.2);
-    border: 5px solid rgb(71, 37, 10);
+    border: 5px solid rgba(0,0,0,0.2);
 }
 .nav-button:hover
 {
@@ -61,27 +66,26 @@ body{
 }
 
 .top-bar{
-    background-color: rgb(104, 55, 16);
-    width: 100vw;
+    width: 100%;
     height: 200px;
 }
 
 .top-bar img{
-    width: 100vw;
+    width: 100%;
     height: 200px;
 }
 
 .top-bar h1{
     position: absolute;
     top: 90px;
-    left: 50vw;
+    left: calc(50vw - 75px);
     text-align: center;
     background-color: rgba(150, 150, 150,.9);
     padding: 20px;
 }
 
 footer{
-    background-color: rgb(104, 55, 16);
+    background-color: darkolivegreen;
     height: 30px;
 }
 footer p{
@@ -92,34 +96,33 @@ footer p{
 main{
     display:flex;
     flex-direction: row-reverse;
-    /*gap: 50px;
-    width: 100;*/
     justify-content: space-between;
     min-height: calc(100vh - 230px);
 }
 
 .main-section{
-    background-color: aqua;
     width:65vw;
     margin-right: 17.5vw;
     margin-left: 50px;
-
+    margin-top: 50px;
 }
 
 .about-me{
+    margin-top: 100px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-me picture{
-    width: 400px;
+.about-me img{
+    width: 30vw;
+    background-color: aqua;
 }
-.about-me div, .about-me p{
+.about-me article, .about-me p{
     text-align: center;
     padding: 20px 20px 0 20px;
 }
-.about-me div{
-    width: calc(65vw - 440px);
+.about-me article{
+    width: calc(50vw - 440px);
 }
 
 .main-section embed{
@@ -137,7 +140,7 @@ main{
 .form{
     width: 70%;
     margin: 15px 15%;
-    border: 5px brown solid;
+    border: 5px black solid;
     border-radius: 10px;
 }
 
@@ -169,7 +172,7 @@ input[type=submit]{
 .links a{
     margin: 0 7px;
     height: 40px;
-    border: 5px brown solid;
+    border: 5px black solid;
     border-radius: 10px;
 }
 
@@ -179,7 +182,6 @@ input[type=submit]{
 
 .all-skills{
     margin: 15px;
-    background-color: cadetblue;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -187,13 +189,13 @@ input[type=submit]{
 }
 
 .skills{
-    background-color: blueviolet;
+    background-color: rgba(44, 56, 23, 0.7);
     width: 25vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    border: 5px brown solid;
+    border: 5px rgba(0,0,0,0.2) solid;
 }
 
 .skills img{
@@ -212,8 +214,11 @@ input[type=submit]{
 .mobile-nav-arrow{
     width: 100px;
     height: 100px;
-    background-color: bisque;
     visibility: hidden;
+}
+
+.mobile-nav-arrow:hover{
+    cursor: pointer;
 }
 
 .mobile-nav-arrow img{
@@ -221,26 +226,76 @@ input[type=submit]{
     height: 100px;
 }
 
+.skills-header{
+    display: flex;
+    align-items: end;
+}
 
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgb(206, 223, 208);
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content div{
+    height: 30px;
+    line-height: 30px;
+    outline:  2px black ridge;
+}
+
+.dropdown-content div:hover{
+    background-color: bisque;
+    cursor: pointer;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-btn{
+    background-color: rgb(206, 223, 208);
+    width: 80px;
+    height: 50px;
+}
 
 @media screen and (max-width: 1200px){
     .skills{
         width: 40vw;
     }
-    
+    .about-me{
+        flex-direction: column;
+    }
+    .about-me article{
+        width: 100%;
+    }
+    .technical-page{
+        margin-right: 10px !important;
+    }
 }
 
 @media screen and (max-width: 700px){
     #nav-menu{
-        transition: left 1s linear ;
         position: absolute;
         left: -500px;
+        top: 200px;
     }
     .main-section{
         width: 80vw;
         margin-right: 2vw;
         margin-left: 5px;
+    }
+
+    .about-me{
+        width: 50vw;
     }
 
     .mobile-nav-arrow{

@@ -10,50 +10,20 @@ hamburger.addEventListener('click', toggleMobileMenu);
 
 
 
-function filterArticles(){
+function filterSkills(selection, tagName){
 
-    let allSkills = document.getElementsByclass("skills")[0];
+    let allSkills = document.getElementsByClassName("skills");
 
-    let filterBGrafic = document.getElementById("grafik");
-    let filterBProg = document.getElementById("programmering");
-    let filterBDesign = document.getElementById("design");
+    document.getElementsByClassName('dropdown-btn')[0].textContent = tagName;
 
-    for (const child of articles.children) {
-        child.style.position = "absolute";
-        child.style.visibility = "hidden";
+    for (let skill of allSkills) {
+        skill.style.position = "absolute";
+        skill.style.visibility = "hidden";
     }
-
-    if (filterBGrafic.checked) {
-        for (const child of allSkills.children) {
-
-            if (child.classList.contains("filter-grafik")) {
-                child.style.position = "relative";
-                child.style.visibility = "visible";
-            }
-
+    for (let skill of allSkills) {
+        if(skill.classList.contains(selection)){
+            skill.style.position = "relative";
+            skill.style.visibility = "visible";
         }
     }
-
-    if (filterBProg.checked) {
-        for (const child of allSkills.children) {
-
-            if (child.classList.contains("filter-programmering")) {
-                child.style.position = "relative";
-                child.style.visibility = "visible";
-            }
-
-        }
-    }
-
-    if (filterBDesign.checked) {
-        for (const child of allSkills.children) {
-
-            if (child.classList.contains("filter-design")) {
-                child.style.position = "relative";
-                child.style.visibility = "visible";
-            }
-
-        }
-    }
-
 }
