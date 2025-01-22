@@ -35,7 +35,7 @@ p{
     flex-direction: column;
     margin-left: 3vh;
     display: flex;
-    background-color:darkolivegreen;
+    background-color:rgb(61, 80, 58);
     min-width: 100px;
 }
 .nav-button{
@@ -85,7 +85,7 @@ p{
 }
 
 footer{
-    background-color: darkolivegreen;
+    background-color: rgb(61, 80, 58);
     height: 30px;
 }
 footer p{
