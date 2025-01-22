@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: rgb(237, 214, 183);
+    
+}
+
+.show{
+    position: inherit !important;
+}
+
+.flip-horizontally{
+    transform: scaleX(-1);
+}
+
+#nav-menu{
+    width: 200px;
+    height: calc(100vh - 230px);
+    /*200px för top-bannern och 30px för footern*/
+    flex-direction: column;
+    margin-left: 5vh;
+    display: flex;
+    background-color:rgb(104, 55, 16);
+
+
+}
+.nav-button{
+    margin-bottom: -5px;
+    height: 100px;
+    background-color: rgba(100, 100, 100,.2);
+    border: 5px solid rgb(71, 37, 10);
+}
+.nav-button:hover
+{
+    background-color: rgba(30, 30, 30,.2);
+    font-size: larger;
+}
+.nav-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.nav-link p{
+    text-align: center;
+    line-height: 100px;
+    color: black;
+}
+
+.clicked{
+    background-color: rgba(20, 20, 20, 0.3) !important;
+}
+
+.top-bar{
+    background-color: rgb(104, 55, 16);
+    width: 100vw;
+    height: 200px;
+}
+
+.top-bar img{
+    width: 100vw;
+    height: 200px;
+}
+
+.top-bar h1{
+    position: absolute;
+    top: 90px;
+    left: 50vw;
+    text-align: center;
+    background-color: rgba(150, 150, 150,.9);
+    padding: 20px;
+}
+
+footer{
+    background-color: rgb(104, 55, 16);
+    height: 30px;
+}
+footer p{
+    text-align: center;
+    line-height: 30px;
+}
+
+main{
+    display:flex;
+    flex-direction: row-reverse;
+    /*gap: 50px;
+    width: 100;*/
+    justify-content: space-between;
+    min-height: calc(100vh - 230px);
+}
+
+.main-section{
+    background-color: aqua;
+    width:65vw;
+    margin-right: 17.5vw;
+    margin-left: 50px;
+
+}
+
+.about-me{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-me picture{
+    width: 400px;
+}
+.about-me div, .about-me p{
+    text-align: center;
+    padding: 20px 20px 0 20px;
+}
+.about-me div{
+    width: calc(65vw - 440px);
+}
+
+.main-section embed{
+    width: 100%;
+    height: 100%;
+}
+
+.form-page{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form{
+    width: 70%;
+    margin: 15px 15%;
+    border: 5px brown solid;
+    border-radius: 10px;
+}
+
+.form form{
+    margin: 15px;
+}
+
+.form form div{
+    margin-bottom: 15px;
+}
+
+#msg{
+    width: 50%;
+    height: 100px;
+}
+
+input[type=submit]{
+    padding: 5px 10px;
+}
+
+.links{
+    width: 70%;
+    margin: 15px 15%;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.links a{
+    margin: 0 7px;
+    height: 40px;
+    border: 5px brown solid;
+    border-radius: 10px;
+}
+
+.links a img{
+    height: 100%;
+}
+
+.all-skills{
+    margin: 15px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.skills{
+    background-color: blueviolet;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 5px brown solid;
+}
+
+.skills img{
+    width: 100px;
+}
+
+.intro-text-technical{
+    text-align: center;
+    margin: 20px;
+}
+
+.cv-main{
+    height: 1000px !important;
+}
+
+.mobile-nav-arrow{
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    visibility: hidden;
+}
+
+.mobile-nav-arrow img{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+    .skills{
+        width: 40vw;
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+    #nav-menu{
+        transition: left 1s linear ;
+        position: absolute;
+        left: -500px;
+    }
+    .main-section{
+        width: 80vw;
+        margin-right: 2vw;
+        margin-left: 5px;
+    }
+
+    .mobile-nav-arrow{
+        visibility: visible;
+    }
+}
