@@ -306,4 +306,17 @@ input[type=submit]{
     .mobile-nav-arrow{
         visibility: visible;
     }
+
+    .skills p{
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-height: 800px){
+    .nav-button{
+        height: 60px;
+    }
+    .nav-link p{
+        line-height: 60px;
+    }
 }
